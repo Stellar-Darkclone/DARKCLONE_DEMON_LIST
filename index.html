@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LIMBO LITE</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Find the Key - Shuffle Game</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>🔑 Find the Key!</h1>
-  <div class="game-container">
-    <div class="key" data-index="0">
-      <img src="https://cdn-icons-png.flaticon.com/512/61/61457.png" alt="key">
-    </div>
-    <div class="key" data-index="1">
-      <img src="https://cdn-icons-png.flaticon.com/512/61/61457.png" alt="key">
-    </div>
-    <div class="key" data-index="2">
-      <img src="https://cdn-icons-png.flaticon.com/512/61/61457.png" alt="key">
-    </div>
-  </div>
+  <main>
+    <h1>🔑 Find the Key</h1>
 
-  <p id="result"></p>
-  <button id="startBtn">Start Game</button>
+    <div class="game-container">
+      <!-- These are fixed slots. We will swap which key-id sits in each slot. -->
+      <div class="key" data-slot="0">
+        <img src="https://cdn-icons-png.flaticon.com/512/61/61457.png" alt="key">
+      </div>
+      <div class="key" data-slot="1">
+        <img src="https://cdn-icons-png.flaticon.com/512/61/61457.png" alt="key">
+      </div>
+      <div class="key" data-slot="2">
+        <img src="https://cdn-icons-png.flaticon.com/512/61/61457.png" alt="key">
+      </div>
+    </div>
+
+    <p id="result"></p>
+    <div class="controls">
+      <button id="startBtn">Start Game</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+    <small class="hint">One key will *lighten* — watch it, then follow it through the shuffle. Good luck! ✨</small>
+  </main>
 
   <script src="script.js"></script>
 </body>
